@@ -1,0 +1,5 @@
+- [x] Move hamburger to left in header (index.html)
+- [ ] Update header CSS for flex layout (styles.css)
+- [ ] Center social icons in footer (styles.css)
+- [ ] Ensure responsive design (styles.css)
+- [ ] Test layout and hamburger functionality
