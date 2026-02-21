@@ -46,8 +46,10 @@ function cycleHeadline() {
     currentHeadlineIndex = (currentHeadlineIndex + 1) % headlineSpans.length;
 }
 
-setInterval(cycleHeadline, 2000);
-cycleHeadline(); // Initial call
+if (headlineSpans.length > 0) {
+    setInterval(cycleHeadline, 2000);
+    cycleHeadline(); // Initial call
+}
 
 // Skills animation on scroll
 const skillFills = document.querySelectorAll('.skill-fill');
@@ -137,12 +139,7 @@ formGroups.forEach(group => {
     });
 });
 
-// Download CV button (placeholder functionality)
-document.querySelectorAll('.download-cv, .download-cv-full').forEach(btn => {
-    btn.addEventListener('click', () => {
-        alert('CV download functionality would be implemented here.');
-    });
-});
+// Download CV link works via native browser download behavior
 
 // View Projects button scroll to projects section
 document.querySelector('.view-projects').addEventListener('click', () => {

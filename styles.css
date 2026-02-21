@@ -26,7 +26,7 @@ body {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
-    padding: 20px 0;
+    padding: 16px 24px;
     transition: all 0.3s ease;
     display: flex;
     justify-content: space-between;
@@ -132,17 +132,23 @@ nav {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    min-height: 100svh;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
+    padding-top: 100px;
+    padding-bottom: 40px;
 }
 
 .hero-content {
     display: flex;
     align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: min(1120px, 92%);
+    margin: 0 auto;
     z-index: 2;
 }
 
@@ -193,12 +199,13 @@ nav {
 }
 
 .text-content h1 {
-    font-size: 48px;
+    font-size: clamp(1.9rem, 4vw, 3rem);
     margin-bottom: 20px;
+    line-height: 1.2;
 }
 
 .animated-headline {
-    font-size: 24px;
+    font-size: clamp(1.1rem, 2.3vw, 1.5rem);
     margin-bottom: 30px;
     overflow: hidden;
 }
@@ -211,9 +218,15 @@ nav {
 .cta-buttons {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    min-height: 46px;
     padding: 12px 24px;
     border: none;
     border-radius: 25px;
@@ -222,6 +235,7 @@ nav {
     cursor: pointer;
     transition: all 0.3s ease;
     font-size: 16px;
+    text-align: center;
 }
 
 .btn:hover {
@@ -242,12 +256,12 @@ nav {
 
 /* About Section */
 .about {
-    padding: 100px 0;
+    padding: clamp(72px, 10vw, 100px) 0;
     background: #f8f9fa;
 }
 
 .about h2 {
-    font-size: 36px;
+    font-size: clamp(1.7rem, 3vw, 2.25rem);
     margin-bottom: 30px;
     text-align: center;
 }
@@ -263,11 +277,11 @@ nav {
 
 /* Skills Section */
 .skills {
-    padding: 100px 0;
+    padding: clamp(72px, 10vw, 100px) 0;
 }
 
 .skills h2 {
-    font-size: 36px;
+    font-size: clamp(1.7rem, 3vw, 2.25rem);
     margin-bottom: 50px;
     text-align: center;
 }
@@ -299,6 +313,10 @@ nav {
     box-shadow: 0 0 20px rgba(0, 123, 255, 0.5);
 }
 
+.skill-icon i {
+    font-size: 34px;
+}
+
 .skill-bar {
     width: 100%;
     height: 10px;
@@ -318,12 +336,12 @@ nav {
 
 /* Projects Section */
 .projects {
-    padding: 100px 0;
+    padding: clamp(72px, 10vw, 100px) 0;
     background: #f8f9fa;
 }
 
 .projects h2 {
-    font-size: 36px;
+    font-size: clamp(1.7rem, 3vw, 2.25rem);
     margin-bottom: 50px;
     text-align: center;
 }
@@ -365,6 +383,7 @@ nav {
     display: flex;
     gap: 10px;
     margin-top: 20px;
+    flex-wrap: wrap;
 }
 
 .project-modal {
@@ -402,11 +421,11 @@ nav {
 
 /* CV Section */
 .cv {
-    padding: 100px 0;
+    padding: clamp(72px, 10vw, 100px) 0;
 }
 
 .cv h2 {
-    font-size: 36px;
+    font-size: clamp(1.7rem, 3vw, 2.25rem);
     margin-bottom: 50px;
     text-align: center;
 }
@@ -427,12 +446,12 @@ nav {
 
 /* Contact Section */
 .contact {
-    padding: 100px 0;
+    padding: clamp(72px, 10vw, 100px) 0;
     background: #f8f9fa;
 }
 
 .contact h2 {
-    font-size: 36px;
+    font-size: clamp(1.7rem, 3vw, 2.25rem);
     margin-bottom: 50px;
     text-align: center;
 }
@@ -471,7 +490,7 @@ nav {
 #footer {
     background: #333;
     color: white;
-    padding: 50px 0 20px;
+    padding: 36px 0 20px;
     text-align: center;
 }
 
@@ -534,7 +553,23 @@ nav {
 }
 
 /* Responsive Design */
+@media (max-width: 991px) {
+    .hero-content {
+        gap: 24px;
+    }
+
+    .photo-placeholder {
+        width: 180px;
+        height: 180px;
+        margin-right: 20px;
+    }
+}
+
 @media (max-width: 768px) {
+    #header {
+        padding: 14px 16px;
+    }
+
     .nav-links {
         display: none;
     }
@@ -546,27 +581,46 @@ nav {
     .hero-content {
         flex-direction: column;
         text-align: center;
+        gap: 18px;
     }
 
     .photo-placeholder {
         margin-right: 0;
-        margin-bottom: 30px;
+        margin-bottom: 14px;
+        width: 160px;
+        height: 160px;
     }
 
     .text-content h1 {
-        font-size: 36px;
+        font-size: clamp(1.5rem, 7vw, 2.2rem);
     }
 
     .cta-buttons {
         justify-content: center;
+        gap: 12px;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 280px;
     }
 
     .skills-grid {
         grid-template-columns: 1fr;
+        gap: 24px;
     }
 
     .projects-grid {
         grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .project-buttons {
+        flex-direction: column;
+    }
+
+    .project-buttons .btn {
+        width: 100%;
     }
 
     .footer-links {
@@ -579,5 +633,34 @@ nav {
 
     .social-icons {
         justify-content: center;
+    }
+
+    .modal-content {
+        width: 92%;
+        margin: 26% auto;
+        padding: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 14px;
+    }
+
+    .hero {
+        padding-top: 92px;
+    }
+
+    .animated-headline {
+        margin-bottom: 18px;
+    }
+
+    .cv-item {
+        padding-left: 18px;
+    }
+
+    .icon {
+        width: 36px;
+        height: 36px;
     }
 }
