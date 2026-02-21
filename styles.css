@@ -317,6 +317,34 @@ nav {
     font-size: 34px;
 }
 
+.skill-icon.html5 i {
+    color: #e34f26;
+}
+
+.skill-icon.css3 i {
+    color: #1572b6;
+}
+
+.skill-icon.js i {
+    color: #f7df1e;
+}
+
+.skill-icon.react i {
+    color: #61dafb;
+}
+
+.skill-icon.mui i {
+    color: #007fff;
+}
+
+.skill-item .fa-git-alt {
+    color: #f05032;
+}
+
+.skill-item .fa-mobile-alt {
+    color: #0ea5e9;
+}
+
 .skill-bar {
     width: 100%;
     height: 10px;
@@ -438,10 +466,35 @@ nav {
     margin-bottom: 30px;
     padding-left: 30px;
     border-left: 3px solid #007bff;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 18px 18px 18px 22px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-left-color 0.3s ease;
 }
 
 .cv-item h3 {
     margin-bottom: 10px;
+}
+
+.cv-item p {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    margin-top: 0;
+    transition: max-height 0.35s ease, opacity 0.35s ease, margin-top 0.35s ease;
+}
+
+.cv-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    border-left-color: #28a745;
+}
+
+.cv-item:hover p,
+.cv-item:focus-within p {
+    max-height: 220px;
+    opacity: 1;
+    margin-top: 8px;
 }
 
 /* Contact Section */
@@ -662,5 +715,11 @@ nav {
     .icon {
         width: 36px;
         height: 36px;
+    }
+
+    .cv-item p {
+        max-height: none;
+        opacity: 1;
+        margin-top: 8px;
     }
 }
