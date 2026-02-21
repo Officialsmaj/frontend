@@ -74,23 +74,25 @@ function checkScroll() {
 window.addEventListener('scroll', checkScroll);
 
 // Project modal
-const projectCards = document.querySelectorAll('.project-card');
 const modal = document.getElementById('project-modal');
 const closeModal = document.querySelector('.close-modal');
+const detailButtons = document.querySelectorAll('.view-details');
 
-projectCards.forEach(card => {
-    card.addEventListener('click', () => {
-        modal.style.display = 'block';
-        // Populate modal with project details (placeholder)
+detailButtons.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+        e.stopPropagation();
         const modalContent = modal.querySelector('.modal-content');
-        modalContent.querySelector('h3').textContent = card.querySelector('h3').textContent;
-        modalContent.querySelector('p').textContent = 'Detailed description of the project goes here.';
+        modalContent.querySelector('h3').textContent = btn.dataset.title || 'Project Details';
+        modalContent.querySelector('p').textContent = btn.dataset.details || 'No details provided.';
+        modal.style.display = 'block';
     });
 });
 
-closeModal.addEventListener('click', () => {
-    modal.style.display = 'none';
-});
+if (closeModal) {
+    closeModal.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+}
 
 window.addEventListener('click', (e) => {
     if (e.target === modal) {
