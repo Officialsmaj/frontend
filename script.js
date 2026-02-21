@@ -147,10 +147,10 @@ document.querySelector('.view-projects').addEventListener('click', () => {
     document.querySelector('#projects').scrollIntoView({ behavior: 'smooth' });
 });
 
-// View Live button (placeholder)
-document.querySelectorAll('.view-live').forEach(btn => {
-    btn.addEventListener('click', () => {
-        alert('Link to live project would open here.');
+// View Live link should open project directly and not trigger the card modal
+document.querySelectorAll('.view-live').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.stopPropagation();
     });
 });
 
