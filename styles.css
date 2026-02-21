@@ -311,6 +311,41 @@ nav {
     text-align: center;
 }
 
+.about-intro {
+    max-width: 920px;
+    margin: 0 auto 26px;
+    text-align: center;
+}
+
+.about-points {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.about-point {
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.about-point:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.about-point h3 {
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+}
+
+.about-point p {
+    font-size: 0.95rem;
+}
+
 .decorative-shape {
     width: 100px;
     height: 100px;
@@ -756,6 +791,10 @@ nav {
     .skills-grid {
         grid-template-columns: 1fr;
         gap: 24px;
+    }
+
+    .about-points {
+        grid-template-columns: 1fr;
     }
 
     .projects-grid {
