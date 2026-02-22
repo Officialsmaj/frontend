@@ -83,6 +83,19 @@ const detailButtons = document.querySelectorAll('.view-details');
 detailButtons.forEach((btn) => {
     btn.addEventListener('click', (e) => {
         e.stopPropagation();
+        const inlineTargetId = btn.dataset.inlineTarget;
+        if (inlineTargetId) {
+            const inlineDetails = document.getElementById(inlineTargetId);
+            if (inlineDetails) {
+                inlineDetails.classList.toggle('show');
+            }
+            return;
+        }
+
+        if (!modal) {
+            return;
+        }
+
         const modalContent = modal.querySelector('.modal-content');
         modalContent.querySelector('h3').textContent = btn.dataset.title || 'Project Details';
         modalContent.querySelector('p').textContent = btn.dataset.details || 'No details provided.';

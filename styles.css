@@ -516,6 +516,23 @@ nav {
     margin-bottom: 10px;
 }
 
+.inline-project-details {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    margin: 0;
+    transform: translateY(-4px);
+    transition: max-height 0.35s ease, opacity 0.35s ease, transform 0.35s ease, margin 0.35s ease;
+}
+
+.inline-project-details.show {
+    max-height: 180px;
+    opacity: 1;
+    margin-top: 6px;
+    margin-bottom: 12px;
+    transform: translateY(0);
+}
+
 .project-buttons {
     display: flex;
     gap: 10px;
