@@ -335,6 +335,7 @@ nav {
     padding: 18px;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
 }
 
 .about-point:hover {
@@ -349,6 +350,24 @@ nav {
 
 .about-point p {
     font-size: 0.95rem;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    margin-top: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease, margin-top 0.3s ease;
+}
+
+.about-point:hover p,
+.about-point:focus-within p,
+.about-point.show p {
+    max-height: 180px;
+    opacity: 1;
+    margin-top: 8px;
+}
+
+.about-point.show,
+.about-point:hover {
+    border-color: #007bff;
 }
 
 .decorative-shape {

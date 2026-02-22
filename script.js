@@ -185,6 +185,23 @@ document.querySelectorAll('.view-live').forEach(link => {
     });
 });
 
+// About cards: show details on click (useful for touch devices)
+const aboutCards = document.querySelectorAll('.about-point');
+aboutCards.forEach((card) => {
+    card.setAttribute('tabindex', '0');
+
+    card.addEventListener('click', () => {
+        card.classList.toggle('show');
+    });
+
+    card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            card.classList.toggle('show');
+        }
+    });
+});
+
 // View Details button (already handled by modal)
 
 // Header background change on scroll
