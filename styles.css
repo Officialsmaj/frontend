@@ -70,20 +70,25 @@ nav {
 }
 
 .icon {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    background: #f0f0f0;
+    background: #ffffff;
+    color: #111111;
+    border: 1px solid #d9d9d9;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease;
+    transition: all 0.25s ease;
     animation: float 3s ease-in-out infinite;
 }
 
 .icon:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 20px rgba(0, 123, 255, 0.5);
+    transform: translateY(-2px) scale(1.06);
+    background: #111111;
+    color: #ffffff;
+    border-color: #111111;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .hamburger {
