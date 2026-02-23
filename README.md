@@ -14,6 +14,11 @@ Personal portfolio website for SALEH MALA AJIMI (SMAJ), showcasing a junior fron
 - JavaScript
 - Font Awesome (CDN)
 
+## Projects
+- SMAJ Ecosystem: https://officialsmaj.github.io/smajpihub/
+- SMAJ PI HUB: https://officialsmaj.github.io/smaj-project/
+- FAMI-NA Express: https://officialsmaj.github.io/food-delivery/
+
 ## Project Structure
 - `index.html` Main page content
 - `styles.css` Styling and layout
@@ -26,5 +31,5 @@ Personal portfolio website for SALEH MALA AJIMI (SMAJ), showcasing a junior fron
 
 ## Customize
 - Update images in `images/`
-- Replace project placeholders in the Projects section
+- Update project cards and links in the Projects section
 - Update the CV file referenced in the hero section
