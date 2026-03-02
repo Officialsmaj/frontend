@@ -91,6 +91,25 @@ nav {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+.whatsapp-icon {
+    position: fixed;
+    right: 16px;
+    bottom: 150px;
+    z-index: 1200;
+    width: 54px;
+    height: 54px;
+    color: #25d366;
+    border-color: #25d366;
+    animation: float 3s ease-in-out infinite, whatsappShake 0.8s ease-in-out infinite;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+.whatsapp-icon:hover {
+    background: #25d366;
+    color: #ffffff;
+    border-color: #25d366;
+}
+
 .hamburger {
     display: none;
     flex-direction: column;
@@ -728,6 +747,13 @@ nav {
 @keyframes rotate {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
+}
+
+@keyframes whatsappShake {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-10deg); }
+    50% { transform: rotate(10deg); }
+    75% { transform: rotate(-10deg); }
 }
 
 @keyframes gradientShift {
