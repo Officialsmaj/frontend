@@ -22,7 +22,7 @@ body {
 #header {
     position: fixed;
     top: 0;
-    width: 50vw;`r`n    max-width: 360px;
+    width: 100%;
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
@@ -122,8 +122,9 @@ nav {
     flex-direction: column;
     position: absolute;
     top: 100%;
-    left: 0;
-    width: 50vw;`r`n    max-width: 360px;
+    right: 0;
+    width: 50vw;
+    max-width: 360px;
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     padding: 20px 0;
@@ -243,7 +244,7 @@ nav {
 }
 
 .photo-placeholder img {
-    width: 50vw;`r`n    max-width: 360px;
+    width: 100%;
     height: 100%;
     object-fit: cover;
 }
@@ -297,7 +298,7 @@ nav {
     position: absolute;
     top: 0;
     left: 0;
-    width: 50vw;`r`n    max-width: 360px;
+    width: 100%;
     height: 100%;
     background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
     animation: gradientShift 10s ease infinite;
@@ -450,7 +451,7 @@ nav {
 }
 
 .skill-bar {
-    width: 50vw;`r`n    max-width: 360px;
+    width: 100%;
     height: 10px;
     background: #e9ecef;
     border-radius: 5px;
@@ -498,13 +499,13 @@ nav {
 }
 
 .project-card img {
-    width: 50vw;`r`n    max-width: 360px;
+    width: 100%;
     height: 200px;
     object-fit: cover;
 }
 
 .project-image-placeholder {
-    width: 50vw;`r`n    max-width: 360px;
+    width: 100%;
     height: 200px;
     display: flex;
     flex-direction: column;
@@ -565,7 +566,7 @@ nav {
     z-index: 1000;
     left: 0;
     top: 0;
-    width: 50vw;`r`n    max-width: 360px;
+    width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
 }
@@ -671,7 +672,7 @@ nav {
 
 .form-group input,
 .form-group textarea {
-    width: 50vw;`r`n    max-width: 360px;
+    width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -737,7 +738,7 @@ nav {
 
 @keyframes typing {
     from { width: 0; }
-    to { width: 50vw;`r`n    max-width: 360px; }
+    to { width: 100%; }
 }
 
 @keyframes blink-caret {
@@ -825,7 +826,7 @@ nav {
     }
 
     .btn {
-        width: 50vw;`r`n    max-width: 360px;
+        width: 100%;
         max-width: 280px;
     }
 
@@ -848,7 +849,7 @@ nav {
     }
 
     .project-buttons .btn {
-        width: 50vw;`r`n    max-width: 360px;
+        width: 100%;
     }
 
     .footer-links {
@@ -898,4 +899,5 @@ nav {
         margin-top: 8px;
     }
 }
+
 
